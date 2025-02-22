@@ -4,8 +4,7 @@
 #include "Timer.h"
 #include "ByteBuffer.h"
 
-
-int main() {
+void sampleByteBuffer() {
     ByteBuffer t;
     t << (char)1;
     t << (char)1;
@@ -13,6 +12,11 @@ int main() {
     t >> a;
 
     std::cout << (int)a << std::endl;
+}
+
+
+int main() {
+    // sampleByteBuffer();
 
     auto loop = uvw::loop::get_default();
     auto timer = Timer::create([]() {
